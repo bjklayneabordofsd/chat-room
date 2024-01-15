@@ -8,3 +8,15 @@ services:
       - 8000:8000
     volumes:
       - ./app:/app
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      - SECRET_KEY=devsecretkey
+      - DEBUG=1
+      - DB_HOST=db
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASS=changeme
+    depends_on:
+      - db
