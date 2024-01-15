@@ -1,5 +1,5 @@
 FROM python:3.9-alpine3.13
-LABEL maintainer="bjklayneabordo.fsd@gmail.com"
+LABEL maintainer="bjklayneabordo.fsd@gmailc.om"
 
 ENV PYTHONUNBUFFERED 1
 
@@ -7,7 +7,7 @@ COPY ./requirements.txt /requirements.txt
 COPY ./app /app
 
 WORKDIR /app
-EXPOSE 8000
+EXPOSE 9000
 
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
@@ -21,3 +21,4 @@ RUN python -m venv /py && \
 ENV PATH="/py/bin:$PATH"
 
 USER app
+
