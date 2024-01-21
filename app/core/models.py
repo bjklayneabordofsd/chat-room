@@ -1,5 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
+class AccountModel(AbstractUser):
+   pass
 
-class Sample(models.Model):
-    attachment = models.FileField()
